@@ -12,6 +12,18 @@
 import numpy as np
 import gradio as gr
 
+from urllib.request import urlretrieve
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/1682878_botinki_officine_creative_marshall_025_chernyy_kozha_natural_naya.JPG2.jpg?raw=true","image_1.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/1683465_sapogi_giovanni_fabiani_g3583_chernyy_zamsha_natural_naya.JPG2.jpg?raw=true","image_2.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/2283128_tufli_nero_giardini_e012011de_rozovyy_zamsha_natural_naya.JPG2.jpg?raw=true","image_3.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/636858_botinki_thierry_rabotin_9170m_chernyy_zamsha_natural_naya.JPG2.jpg?raw=true","image_4.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/758141_tufli_calvin_klein_twiggy_chernyy_kozha_natural_naya.JPG2.jpg?raw=true","image_5.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/778124_botinki_giovanni_fabiani_2135mo_chernyy_kozha_natural_naya.JPG2.jpg?raw=true","image_6.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/882830_botinki_thierry_rabotin_9171t_chernyy_kozha_natural_naya.JPG2.jpg?raw=true","image_7.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/883554_bosonozhki_calvin_klein_yusra_chernyy_tekstil_.JPG2.jpg?raw=true","image_8.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/884170_polubotinki_thierry_rabotin_1435mr_chernyy_zamsha_natural_naya.JPG2.jpg?raw=true", "image_9.jpg")
+urlretrieve("https://github.com/PRAMODVENKATESH/hugging-face-Similarity/blob/main/968821_tufli_loriblu_wsj14_chernyy_zamsha_natural_naya.JPG2.jpg?raw=true","image_10.jpg")
+
 demo = gr.Blocks()
 
 def do_nothing(example: list) -> dict:
@@ -76,16 +88,16 @@ with demo:
                                            #type='pil',
                                            #elem_id='input-image')
                 example_images = gr.Dataset(components=[image_input],
-                                                samples= [['C:\Users\Utente\Sim-Search\636858_botinki_thierry_rabotin_9170m_chernyy_zamsha_natural_naya.JPG2.jpg'], 
-                                                ['C:\Users\Utente\Sim-Search\758141_tufli_calvin_klein_twiggy_chernyy_kozha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\778124_botinki_giovanni_fabiani_2135mo_chernyy_kozha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\882830_botinki_thierry_rabotin_9171t_chernyy_kozha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\883554_bosonozhki_calvin_klein_yusra_chernyy_tekstil_.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\884170_polubotinki_thierry_rabotin_1435mr_chernyy_zamsha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\1682878_botinki_officine_creative_marshall_025_chernyy_kozha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\2283128_tufli_nero_giardini_e012011de_rozovyy_zamsha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\1683465_sapogi_giovanni_fabiani_g3583_chernyy_zamsha_natural_naya.JPG2.jpg'],
-                                                ['C:\Users\Utente\Sim-Search\1682878_botinki_officine_creative_marshall_025_chernyy_kozha_natural_naya.JPG2.jpg']])
+                                                samples= [["image_1.jpg"], 
+                                                ["image_2.jpg"],
+                                                ["image_3.jpg"],
+                                                ["image_4.jpg"],
+                                                ["image_5.jpg"],
+                                                ["image_6.jpg"],
+                                                ["image_7.jpg"],
+                                                ["image_8.jpg"],
+                                                ["image_9.jpg"],
+                                                ["image_10.jpg"]])
 
         
                 
